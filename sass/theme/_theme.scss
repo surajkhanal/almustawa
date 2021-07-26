@@ -1,0 +1,179 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Roboto, Raleway, sans-serif;
+}
+
+.btn {
+    font-weight: 500;
+}
+
+// site header
+.main-header {
+    .header-top {
+        position: relative;
+        background: $maroonDark;
+        padding: 0.5rem 0;
+
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            text-align: center;
+
+            @media (min-width: 768px) {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-box {
+            li {
+                position: relative;
+                display: inline-block;
+                font-size: 14px;
+                color: #fff;
+                margin-right: 30px;
+
+                .fa {
+                    margin-right: 8px;
+                    color: rgba(255,255,255,0.87);
+                }
+
+                a {
+                    font-weight: 500; 
+                }
+            }
+        }
+
+        .social-links {
+            position: relative;
+            display: inline-block;
+
+            li {
+                position: relative;
+                display: inline-block;
+                margin-right: 15px;
+            }
+
+            a {
+                position: relative;
+                display: inline-block;
+                font-size: 16px;
+                // color: #2f3753;
+            }
+        }
+    }
+
+    .navbar {
+        .custom-logo-link {
+            max-width: 160px;
+        }
+    }
+    
+    .navbar-light {
+        .navbar-nav {
+            .nav-link {
+                font-size: 1rem;
+                font-weight: 500;
+                color: var(--dark);
+                padding-right: .8rem;
+                padding-left: .8rem;
+                transition: all 200ms ease;
+    
+                &:hover {
+                    color: $goldenDark;
+                }
+    
+                &.active {
+                    color: $goldenDark;
+                }
+            }
+            .active > .nav-link {
+                color: $goldenDark;
+            }
+        }
+        .btn-order {
+            border-radius: 20px;
+            color: white;
+            padding: 0.4rem 0.9rem;
+            
+        }
+    }
+}
+
+
+
+// site footer
+#to-top-button {
+    color: rgb(255,255,255);
+    background-color: rgba(0,0,0,1);
+    border: 1px solid rgba(0,0,0,1);
+    position: fixed;
+    z-index: 999;
+    width: 32px;
+    height: 32px;
+    right: 12px;
+    bottom: -32px;
+    border-radius: 16px;
+
+    span {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 32px;
+        width: 32px;
+        text-align: center;
+        padding-top: 1px;
+        margin-left: -1px;
+    }
+}
+
+// page styles
+.page {
+    .entry-header {
+        h1.entry-title {
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+}
+
+// 404
+.not-found {
+    text-align: center;
+
+    h1 {
+        font-size: 12rem;
+        text-align: center;
+        color: var(--primary);
+        font-weight: 700;
+    }
+
+    .page-title {
+        font-size: 2.2rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+}
