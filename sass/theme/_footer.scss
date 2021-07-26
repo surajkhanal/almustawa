@@ -1,0 +1,101 @@
+.footer {
+    border-top: 4px solid var(--goldenDark);
+    background-color: var(--maroonDark);
+    background-image: url('../img/UAE_Landing.png');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+    padding-top: 50px;
+
+    &-bottom {
+        p {
+            font-size: 12px !important;
+            margin-bottom: 0;
+            color: white;
+            padding: 0.5rem 0;
+        }
+    }
+
+    .footer-widget {
+        color: white;
+
+        .widget-title, h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        &.widget_text {
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        a {
+            transition: all 200ms;
+
+            &:hover {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        .menu a {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 16px;
+
+            
+        }
+    }
+
+    .contact-info {
+        li {
+            display: inline-flex;
+            gap: 12px;
+            flex-direction: row ;
+            align-items: center;
+            margin-bottom: 15px;
+
+            p {
+                flex: 1 1 auto;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+#to-top-button {
+    color: rgb(255,255,255);
+    background-color: rgba(0,0,0,1);
+    border: 1px solid rgba(0,0,0,1);
+    position: fixed;
+    z-index: 999;
+    width: 32px;
+    height: 32px;
+    right: 12px;
+    bottom: -32px;
+    border-radius: 16px;
+
+    span {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 32px;
+        width: 32px;
+        text-align: center;
+        padding-top: 1px;
+        margin-left: -1px;
+    }
+}

@@ -39,18 +39,13 @@ $container = get_theme_mod('almustawa_container_type');
 				<div class="container header-top-inner">
 					<div class="top-left ">
 						<ul class="info-box ">
-							<li><i class="fa fa-phone"></i>For Orders <a class="phone" href="tel:8120703692">812-070-3692</a></li>
-							<li><i class="fa fa-envelope-open"></i><a href="mailto:donations@example.org">donations@example.org</a></li>
-							<li><i class="fa fa-clock-o"></i>Monday to Friday 9am to 5pm</li>
+							<li><i class="fa fa-phone"></i><?php echo get_theme_mod('phone_numbers'); ?></li>
+							<!-- <li><i class="fa fa-envelope-open"></i><?php //echo get_theme_mod('emails'); ?></li> -->
+							<li><i class="fa fa-clock-o"></i><?php echo get_theme_mod('working_hours'); ?></li>
 						</ul>
 					</div>
 					<div class="top-right">
-						<ul class="social-links">
-							<li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-						</ul>
+						<?php echo do_shortcode('[social_link]'); ?>
 					</div>
 				</div>
 			</div>

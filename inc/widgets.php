@@ -169,6 +169,42 @@ if ( ! function_exists( 'almustawa_widgets_init' ) ) {
 				'after_title'   => '</h3>',
 			)
 		);
+		
+		register_sidebar(
+			array(
+				'name'          => __( 'Footer One', 'almustawa' ),
+				'id'            => 'footer1',
+				'description'   => __( 'Footer widget section 1', 'almustawa' ),
+				'before_widget' => '<div id="%1$s" class="footer-widget %2$s ">',
+				'after_widget'  => '</div><!-- .footer-widget -->',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Footer Two', 'almustawa' ),
+				'id'            => 'footer2',
+				'description'   => __( 'Footer widget section 2', 'almustawa' ),
+				'before_widget' => '<div id="%1$s" class="footer-widget %2$s ">',
+				'after_widget'  => '</div><!-- .footer-widget -->',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Footer Three', 'almustawa' ),
+				'id'            => 'footer3',
+				'description'   => __( 'Footer widget section 3', 'almustawa' ),
+				'before_widget' => '<div id="%1$s" class="footer-widget %2$s ">',
+				'after_widget'  => '</div><!-- .footer-widget -->',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
 
 	}
 } // End of function_exists( 'almustawa_widgets_init' ).

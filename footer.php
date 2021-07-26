@@ -16,32 +16,38 @@ $container = get_theme_mod('almustawa_container_type');
 
 <?php get_template_part('sidebar-templates/sidebar', 'footerfull'); ?>
 
-<div class="wrapper" id="wrapper-footer">
-
-	<div class="<?php echo esc_attr($container); ?>">
-
+<footer class="footer">
+	<div class="container">
 		<div class="row">
+			<div class="col-lg-4 mb-4">
+				<?php if (is_active_sidebar('footer1')) : ?>
 
-			<div class="col-md-12">
+					<?php dynamic_sidebar('footer1'); ?>
 
-				<footer class="site-footer" id="colophon">
-
-					<div class="site-info">
-
-						<?php almustawa_site_info(); ?>
-
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
-
+				<?php endif; ?>
 			</div>
-			<!--col end -->
+			<div class="col-lg-4 mb-4">
+				<?php if (is_active_sidebar('footer2')) : ?>
 
-		</div><!-- row end -->
+					<?php dynamic_sidebar('footer2'); ?>
 
-	</div><!-- container end -->
+				<?php endif; ?>
+			</div>
+			<div class="col-lg-4 mb-4">
+				<?php if (is_active_sidebar('footer3')) : ?>
 
-</div><!-- wrapper end -->
+					<?php dynamic_sidebar('footer3'); ?>
+
+				<?php endif; ?>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<p class="text-center">© <?php echo date('Y');?> Al Mustawa Transport. All right reserved.</p>
+		</div>
+	</div>
+</footer>
 
 </div><!-- #page we need this extra closing tag here -->
 

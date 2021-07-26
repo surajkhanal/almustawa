@@ -6,3 +6,8 @@
 $primary: #e0a30b; // Thats a sample how you could change a BootStrap variable.
 $maroonDark: #4f0000; 
 $goldenDark: #e0a30b;
+
+:root {
+    --maroonDark: #{$maroonDark};
+    --goldenDark: #{$goldenDark};   
+}

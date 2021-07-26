@@ -1,4 +1,5 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
 html {
     scroll-behavior: smooth;
 }
@@ -8,6 +9,24 @@ body {
 
 .btn {
     font-weight: 500;
+}
+
+.social-links {
+    position: relative;
+    display: inline-block;
+
+    li {
+        position: relative;
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    a {
+        position: relative;
+        display: inline-block;
+        font-size: 16px;
+        // color: #2f3753;
+    }
 }
 
 // site header
@@ -27,9 +46,15 @@ body {
 
             @media (min-width: 768px) {
                 flex-direction: row;
+                flex-wrap: wrap;
                 align-items: center;
                 justify-content: space-between;
+                text-align: left;
             }
+        }
+
+        .top-left {
+            flex: 1 1 auto;
         }
 
         ul {
@@ -41,7 +66,8 @@ body {
         .info-box {
             li {
                 position: relative;
-                display: inline-block;
+                display: inline-flex;
+                align-items: center;
                 font-size: 14px;
                 color: #fff;
                 margin-right: 30px;
@@ -54,26 +80,16 @@ body {
                 a {
                     font-weight: 500; 
                 }
+
+                p {
+                    margin-bottom: 0;
+                    display: inline-block;
+                    font-size: 13px;
+                }
             }
         }
 
-        .social-links {
-            position: relative;
-            display: inline-block;
-
-            li {
-                position: relative;
-                display: inline-block;
-                margin-right: 15px;
-            }
-
-            a {
-                position: relative;
-                display: inline-block;
-                font-size: 16px;
-                // color: #2f3753;
-            }
-        }
+        
     }
 
     .navbar {
@@ -113,35 +129,12 @@ body {
     }
 }
 
-
-
 // site footer
-#to-top-button {
-    color: rgb(255,255,255);
-    background-color: rgba(0,0,0,1);
-    border: 1px solid rgba(0,0,0,1);
-    position: fixed;
-    z-index: 999;
-    width: 32px;
-    height: 32px;
-    right: 12px;
-    bottom: -32px;
-    border-radius: 16px;
+@import 'footer';
 
-    span {
-        display: inline-block;
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 32px;
-        width: 32px;
-        text-align: center;
-        padding-top: 1px;
-        margin-left: -1px;
-    }
-}
 
 // page styles
-.page {
+.page, .archive, .single {
     .entry-header {
         h1.entry-title {
             font-weight: 300;

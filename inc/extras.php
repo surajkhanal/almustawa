@@ -236,3 +236,84 @@ if ( ! function_exists( 'almustawa_kses_title' ) ) {
 		return wp_kses( $data, $allowed_tags );
 	}
 } // End of if function_exists( 'almustawa_kses_title' ).
+
+
+/**
+ * Contact Info Shortcode
+ * @description [contact_info]
+ *
+ * @return string
+ * @since 1.0.0
+ */
+if( !function_exists('almustawa_contact_info_shortcode') ) {
+	function almustawa_contact_info_shortcode($args, $content) {
+
+		$email = get_theme_mod('emails');
+		$phone_numbers = get_theme_mod('phone_numbers');
+		$address = get_theme_mod('address');
+		$working_hours = get_theme_mod('working_hours');
+
+		$html = '';
+		$html .= '<ul class="contact-info list-style-one">';
+		if($email) {
+			$html .= '<li><span class="icon fa fa-envelope"></span>'.esc_html($email).'</li>';
+		}
+		if($phone_numbers) {
+			$html .= '<li><span class="icon fa fa-phone"></span>'.$phone_numbers.'</li>';
+		}
+		if($address) {
+			$html .= '<li><span class="icon fa fa-map-marker"></span>'.esc_html($address).'</li>';
+		}
+		if($working_hours){
+			$html .= '<li><span class="icon fa fa-clock-o"></span>'.esc_html($working_hours).' </li>';
+		}
+		
+		$html .= '</ul>';
+		return $html;
+	}
+	add_shortcode( 'contact_info' , 'almustawa_contact_info_shortcode' );
+}
+
+
+/**
+ * Social Link Shortcode
+ * @description [social_link]
+ *
+ * @return string
+ * @since 1.0.0
+ */
+if( !function_exists('almustawa_social_link_shortcode') ) {
+	function almustawa_social_link_shortcode($args, $content) {
+
+		$facebook = get_theme_mod('facebook');
+		$twitter = get_theme_mod('twitter');
+		$linkedin = get_theme_mod('linkedin');
+		$instagram = get_theme_mod('instagram');
+		$pinterest = get_theme_mod('pinterest');
+
+
+		$html = '';
+		$html .= '<div class="upper-column">';
+			$html .= '<ul class="social-links">';
+				if(!empty($facebook)){
+					$html .= '<li><a href="'.esc_attr($facebook).'"><span class="fa fa-facebook"></span></a></li>';
+				}
+				if(!empty($twitter)){
+					$html .= '<li><a href="'.esc_attr($twitter).'"><span class="fa fa-twitter"></span></a></li>';
+				}
+				if(!empty($linkedin)) {
+					$html .= '<li><a href="'.esc_attr($linkedin).'"><span class="fa fa-linkedin"></span></a></li>';
+				}
+				if(!empty($instagram)) {
+					$html .= '<li><a href="'.esc_attr($instagram).'"><span class="fa fa-instagram"></span></a></li>';
+				}
+				if(!empty($pinterest)) {
+					$html .= '<li><a href="'.esc_attr($pinterest).'"><span class="fa fa-pinterest"></span></a></li>';
+				}
+
+				$html .= '</ul>';
+		$html .= '</div><!-- ./upper-column -->';
+		return $html;
+	}
+	add_shortcode( 'social_link' , 'almustawa_social_link_shortcode' );
+}

@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<div class="entry-meta">
 
-			<?php almustawa_posted_on(); ?>
+			<?php //almustawa_posted_on(); ?>
 
 		</div><!-- .entry-meta -->
 
